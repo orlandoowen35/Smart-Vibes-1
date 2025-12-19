@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Student Guide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">Smart Student</div>
+
+  <!-- HAMBURGER -->
+  <div class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <nav>
+    <ul id="navMenu">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#motivation">Motivation</a></li>
+      <li><a href="#tips">Tips</a></li>
+      <li><a href="#gayabelajar">Gaya Belajar</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+</header>
+  <section id="home" class="hero">
+    <video autoplay muted loop id="heroVideo">
+      <source src="Video/bg.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="hero-text">
+      <h1>Belajar dengan Semangat Baru</h1>
+      <p>Tingkatkan potensi dirimu setiap hari dengan inspirasi positif.</p>
+      <button id="motivateBtn">Motivasi Aku!</button>
+    </div>
+  </section>
+
+  <section id="motivation" class="quote fade-in">
+    <h2>Motivasi Hari Ini</h2>
+    <blockquote id="quoteText">“Tidak ada usaha yang sia-sia, semua butuh waktu untuk berbuah.”</blockquote>
+  </section>
+
+  <section id="tips"></section>
+  <section class="tips-section">
+  <h2>Tips Belajar Efektif</h2>
+  
+  <div class="tips-container">
+     <div class="tip-card">
+       <img src="Foto/1.jpg" alt="Belajar Rutin">
+        <h3>Belajar Rutin</h3>
+         <p>Belajar rutin membantu otak terbiasa menyerap informasi secara perlahan tapi konsisten. Dengan jadwal belajar yang teratur, kamu bisa memahami materi tanpa merasa terbebani. Kunci utamanya bukan berapa lama kamu belajar, tapi seberapa sering kamu melakukannya dengan fokus dan niat yang kuat.</p>
+          <a href="https://dit-mawa.upi.edu/teknik-belajar-yang-efektif/" class="visit-btn">Teknik Belajar Efektif</a> 
+          <a href="https://www.canva.com/design/DAGxud2YHjs/3SrngMJg-dubuS2jzXIMvA/view?utm_content=DAGxud2YHjs&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink&mode=preview" class="visit-btn">Make Your Schedule</a> 
+      </div>
+
+    <div class="tip-card">
+      <img src="Foto/1.jpg" alt="Fokus di Waktu Tertentu">
+      <h3>Fokus di Waktu Tertentu</h3>
+      <p>Temukan waktu terbaikmu untuk belajar, dan jadikan itu kebiasaan harian.</p>
+      <a href="https://example.com" class="visit-btn">Kunjungi Website Lain</a>
+    </div>
+
+    <div class="tip-card">
+      <img src="Foto/1.jpg" alt="Istirahat yang Cukup">
+      <h3>Istirahat yang Cukup</h3>
+      <p>Otak butuh istirahat agar tetap segar dan siap menerima pelajaran baru.</p>
+      <a href="https://example.com" class="visit-btn">Kunjungi Website Lain</a>
+    </div>
+  </div>
+</section>
+
+<!-- === Tes Gaya Belajar Kamu === -->
+ <section id="gayabelajar"></section>
+<section class="quiz-section" id="quiz">
+  <h2>🧠 Tes Gaya Belajar Kamu</h2>
+  <p>Yuk cari tahu apakah kamu tipe <b>Visual</b>, <b>Auditori</b>, atau <b>Kinestetik</b>!</p>
+
+  <div class="quiz-container">
+    <div class="question">
+      <p>1️⃣ Saat belajar, kamu paling suka...</p>
+      <button class="option" data-type="visual">Melihat gambar atau diagram</button>
+      <button class="option" data-type="auditori">Mendengar penjelasan guru</button>
+      <button class="option" data-type="kinestetik">Langsung praktek</button>
+    </div>
+
+    <div class="question">
+      <p>2️⃣ Kamu paling cepat ingat kalau...</p>
+      <button class="option" data-type="visual">Melihat catatan warna-warni</button>
+      <button class="option" data-type="auditori">Mendengarkan rekaman</button>
+      <button class="option" data-type="kinestetik">Menulis ulang materi</button>
+    </div>
+
+    <div class="question">
+      <p>3️⃣ Waktu senggang, kamu lebih suka...</p>
+      <button class="option" data-type="visual">Nonton video</button>
+      <button class="option" data-type="auditori">Dengerin musik/podcast</button>
+      <button class="option" data-type="kinestetik">Main atau olahraga</button>
+    </div>
+  </div>
+
+  <button id="checkResult">Lihat Hasil</button>
+  <div id="quizResult" class="result-box"></div>
+</section>
+
+<!-- === Jadwal Belajar Mingguan === -->
+ <section id="jadwal"></section>
+<section class="schedule-section" id="schedule">
+  <h2>📅 Jadwal Belajar Mingguan</h2>
+  <p>Buat rencana belajar kamu biar lebih teratur!</p>
+
+  <table id="scheduleTable">
+    <thead>
+      <tr>
+        <th>Hari</th>
+        <th>Pelajaran</th>
+        <th>Waktu</th>
+        <th>Catatan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Senin</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+      <tr><td>Selasa</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+      <tr><td>Rabu</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+      <tr><td>Kamis</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+      <tr><td>Jumat</td><td contenteditable="true"></td><td contenteditable="true"></td><td contenteditable="true"></td></tr>
+    </tbody>
+  </table>
+  <button id="saveSchedule">💾 Simpan Jadwal</button>
+  <p id="saveMessage"></p>
+</section>
+
+  <section id="about" class="content fade-in">
+    <h2>Tentang Website</h2>
+    <p>Website ini dibuat untuk menunjukkan bahwa semangat dan kreativitas tidak mengenal usia.</p>
+    <p><strong>Dibuat oleh: Orlando Owen Tan</strong></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Smart Student Guide</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
